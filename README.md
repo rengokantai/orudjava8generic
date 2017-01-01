@@ -17,3 +17,13 @@ public static double sumList(List<Number> numbers){
 ```
 ##3. Wildcards and PECS
 ###1 Unbounded Wildcards in Java 8
+
+
+##5. Type erasure
+###1 Basic Type erasure
+####01:52
+
+##6. Summary
+###1 Multiple Bounds and Conclusions
+```<? super T>``` to provide  
+```<? extends T>``` to use
