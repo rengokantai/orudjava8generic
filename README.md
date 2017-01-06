@@ -33,6 +33,43 @@ __In java 8, streams__
 - __using the value in the supplied ;ambda ->extends__
 
 
+
+
+
+##4. Examples from the Java 8 API
+###1 Stream.max in the Java 8 API
+```
+Employee maxId = employees.stream().max(new Comparator<Employee>(){
+  @Override
+  public int compare(Employee a,Employee b){
+    return a.getId()-b.getId();
+  }
+}).orElse(Employee.DEFAULT_EMPLOYEE);
+```
+same as
+```
+employees.stream().max(comparingInt(Employee::getId)).orElse(Employee.DEFAULT_EMPLOYEE);
+```
+
+
+
+
+##5 Map.Entry.comparingByKey and comparingByValue in the Java 8 API
+####08:02 reverse order
+```
+map.entrySet().stream().sorted(Map.Entry.comparingKey(Comparator.reverseOrder())).forEach(entry->System.print(entry.getKey());
+```
+or
+```
+.comparingKey(comparing(Employee::getName)))
+```
+
+
+
+
+
+
+
 ##5. Type erasure
 ###1 Basic Type erasure
 ####01:52
