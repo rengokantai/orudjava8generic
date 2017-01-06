@@ -19,6 +19,20 @@ public static double sumList(List<Number> numbers){
 ###1 Unbounded Wildcards in Java 8
 
 
+###2 Upper Bounds in Java 8 (extends)
+
+
+###3 Lower Bounds and PECS in Java 8
+see LowwerBounds.java.  
+
+PECS:
+- Producer Extends, Consumer Super
+
+__In java 8, streams__
+- __providing a value from the stram ->super__
+- __using the value in the supplied ;ambda ->extends__
+
+
 ##5. Type erasure
 ###1 Basic Type erasure
 ####01:52
