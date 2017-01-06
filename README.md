@@ -51,10 +51,13 @@ same as
 employees.stream().max(comparingInt(Employee::getId)).orElse(Employee.DEFAULT_EMPLOYEE);
 ```
 
+###4 Collectors.toMap in the Java 8 API
+```
+Map<Integer,Employee> employeeMap = employees.stream().collect(toMap(Employee::getId,
+```
 
 
-
-##5 Map.Entry.comparingByKey and comparingByValue in the Java 8 API
+###5 Map.Entry.comparingByKey and comparingByValue in the Java 8 API
 ####08:02 reverse order
 ```
 map.entrySet().stream().sorted(Map.Entry.comparingKey(Comparator.reverseOrder())).forEach(entry->System.print(entry.getKey());
